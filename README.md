@@ -1,2 +1,1 @@
-# test_repo
-This is test repository
+# Collection of useful tweaks and hacks
