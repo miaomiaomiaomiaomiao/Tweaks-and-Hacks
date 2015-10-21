@@ -15,12 +15,6 @@ class ResultView(ListView):
             if form.is_valid():
                 company = form.cleaned_data['company']
                 region = form.cleaned_data['region']
-
-/---Based on form entry, do the filter on the database-----/
-
-                queryset=Result.objects.filter(region=region,company=company)
-
-                form.save()
-
+                queryset=Result.objects.filter(region=region, company=company)
                 return queryset               
         return super(ResultView,self).get_queryset()
