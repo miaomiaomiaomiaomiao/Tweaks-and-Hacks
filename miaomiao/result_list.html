@@ -1,0 +1,27 @@
+<div class="basicinfo">         <!--Entry Form information submitted by user-->
+    <table border="1" cellpadding="1">
+    <tr>
+        <td align="left">Company</td>
+        <td>{{ company }}</td>
+    </tr>
+    <tr>
+        <td align="left">Region</td>
+        <td>{{ region }}</td>
+    </tr>
+  </table>
+</div>     
+
+<!--Showing the filtered result in database-->  
+<td><table border="0" cellspacing="10" cellpadding="10">
+<tr><b>Sales</b></tr>
+<td bgcolor="#F0F0F0"> {{ sales.sales__sum }}</td>
+
+</tr>
+<tr><b>Employee</b></tr>
+<tr>
+<td bgcolor="#F0F0F0"> {{ employee.employee__sum }}</td>
+
+</tr>
+<tr><b>Departments</b></tr>
+<td bgcolor="#F0F0F0"> {{ departments.departments__sum }}</td>
+</td></table>
