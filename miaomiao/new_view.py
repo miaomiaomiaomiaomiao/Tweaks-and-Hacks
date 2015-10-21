@@ -10,8 +10,8 @@ class ResultView(ListView):
         return context
 
     def get_queryset(self):
-        if self.request.method == 'POST':
-            form = InputForm(self.request.POST)
+        if self.request.method == 'POST':  # if form action target this view, else "GET"
+            form = InputForm(self.request.POST)  # if form action target this view, else "GET"
             if form.is_valid():
                 company = form.cleaned_data['company']
                 region = form.cleaned_data['region']
