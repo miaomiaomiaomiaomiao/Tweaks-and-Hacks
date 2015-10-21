@@ -9,6 +9,8 @@ class ResultView(ListView):
         context["sales"] = self.get_queryset().aggregate(Sum('sales'))
         context["employee"] = self.get_queryset().aggregate(Sum('employee'))
         context["departments"] = self.get_queryset().aggregate(Sum('departments'))
+        context["region"] = self.request.POST.get("region")  # if form action target this view, else "GET"
+        context["company"] = self.request.POST.get("company")  # if form action target this view, else "GET"
         return context
 
     def get_queryset(self):
@@ -31,6 +33,8 @@ class ResultView(ListView):
         context["sales"] = self.get_queryset().aggregate(Sum('sales'))
         context["employee"] = self.get_queryset().aggregate(Sum('employee'))
         context["departments"] = self.get_queryset().aggregate(Sum('departments'))
+        context["region"] = self.request.POST.get("region")  # if form action target this view, else "GET"
+        context["company"] = self.request.POST.get("company")  # if form action target this view, else "GET"
         return context
 
     def get_queryset(self):
